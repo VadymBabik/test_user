@@ -1,0 +1,41 @@
+.user {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  font-weight: bold;
+  &:hover {
+    background-color: aliceblue;
+  }
+  .editWrapper {
+    margin: 1em 0 0;
+  }
+  .wrapper {
+    margin-bottom: 0;
+  }
+  &__desc {
+    font-weight: normal;
+    width: 100%;
+  }
+  &__options {
+    color: grey;
+    .edit {
+      padding: 0 0.5em;
+      &:hover {
+        cursor: pointer;
+        color: #00e676;
+      }
+    }
+    .delete {
+      @extend .edit;
+      &:hover {
+        color: red;
+      }
+    }
+    .check {
+      @extend .edit;
+    }
+  }
+  .processSave {
+    filter: blur(1em);
+  }
+}
