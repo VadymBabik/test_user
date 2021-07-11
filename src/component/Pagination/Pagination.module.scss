@@ -1,0 +1,35 @@
+.pagination {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 3em 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    height: 5px;
+    color: black;
+    padding: 10px;
+    margin: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+      background-color: #3f51b5;
+    }
+  }
+}
+.activePage a {
+  background-color: #3f51b5;
+  color: white;
+}
+.disabledPage a {
+  color: rgba(128, 128, 128, 0.59);
+  background-color: #ffffff;
+  &:hover {
+    background-color: #ffffff;
+  }
+}
+.previousLin,
+.nextLink {
+  font-size: 1.5em;
+}
