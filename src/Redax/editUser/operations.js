@@ -27,8 +27,7 @@ export const removeUsers = (id) => {
 export const createNewUsers = (data) => {
   return async (dispatch) => {
     try {
-      const dd = await fetchHttp(`/users`, "post", data);
-      console.log(dd);
+      await fetchHttp(`/users`, "post", data);
       dispatch(fetchUsers(await fetchHttp("/users")));
       dispatch(saveEditUser());
     } catch (error) {
