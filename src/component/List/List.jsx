@@ -19,7 +19,6 @@ const List = () => {
   useEffect(() => {
     dispatch(loadingUsers());
   }, [dispatch]);
-  console.log(isLoading);
   return (
     <div className="container">
       <h3 className="center-align">List user</h3>

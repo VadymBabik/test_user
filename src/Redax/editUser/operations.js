@@ -17,8 +17,8 @@ export const saveEditUsers = (id, data) => {
 export const removeUsers = (id) => {
   return async (dispatch) => {
     try {
-      await fetchHttp(`/user/${id}`, "delete");
-      dispatch(fetchUsers(await fetchHttp("/users")));
+      const data = await fetchHttp(`/user/${id}`, "delete");
+      dispatch(fetchUsers(data));
     } catch (error) {
       throw error.message;
     }
@@ -27,7 +27,8 @@ export const removeUsers = (id) => {
 export const createNewUsers = (data) => {
   return async (dispatch) => {
     try {
-      await fetchHttp(`/users`, "post", data);
+      const dd = await fetchHttp(`/users`, "post", data);
+      console.log(dd);
       dispatch(fetchUsers(await fetchHttp("/users")));
       dispatch(saveEditUser());
     } catch (error) {
